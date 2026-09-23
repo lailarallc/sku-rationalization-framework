@@ -142,3 +142,9 @@ The demo tool is hosted as a standalone public URL (GitHub Pages, Netlify, or St
   - CSS token audit: all :root tokens and inline Plotly hex values verified against Lailara Design System v2 — no deviations
 - **Deferred:** Nothing
 - **Next review:** 2026-07-29
+
+### 2026-09-23 — Audit (health check only)
+- **Findings:** 1 critical, 6 important, 4 nice-to-have
+- **Top concerns:** Client mode scores client portfolios against Cinderhaven-calibrated thresholds (constants.py) with no per-client recalibration, so client quadrant deliverables are relative to the demo brand; loaded_margin_pct units are ambiguous (ratio vs %) for client input. Workflow state is stale: HANDOFF.md last entry 2026-06-29 despite the Aug client-mode/CI work, README says 92 tests (103 pass), and deploy docs disagree (Fly vs GitHub Pages vs Cloudflare Pages).
+- **Action taken:** Audit only — no fixes this session
+- **Next review:** 2026-12-22
