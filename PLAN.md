@@ -62,6 +62,14 @@ Work in vertical slices — one deliverable end-to-end before moving to the next
 - [x] Methodology doc: how each dimension is scored and weighted, data sources, cannibalization method and its limitations
 - [x] Link from demo tool footer and repo README
 
+### 5. Case-pack COGS fix rescore (added 2026-09-28)
+Platform `int_loaded_contribution_by_sku` multiplied units by case_pack_qty (fixed in platform 4e9f37a), so every loaded margin read -246% to -934% and the margin score ranked SKUs by case pack.
+- [ ] Rebuild the view on production: `dbt build --select "int_loaded_contribution_by_sku+"` (runs assert_sku_loaded_margin_in_band; stop if it fails)
+- [ ] `python scripts\calibrate.py`; stop and show the diff if any threshold other than margin moves
+- [ ] `python run_scoring.py`; remove the strict xfail on `test_margin_thresholds_in_plausible_band_when_calibrated`; re-baseline the golden hash and quadrant-count tests
+- [ ] Copy sweep, final copy written in chat: app/index.html "all margins negative" (lines 43, 135, 199), docs/scoring_methodology.md, README counts, dimensions.py docstring, website SKU audit + Ten Decisions pages, blog posts, canonical "19 of 50"
+- [ ] Push only after the copy sweep (push to main deploys)
+
 ## Out of scope for this arc
 
 - Excel financial model (deferred — potential engagement deliverable)

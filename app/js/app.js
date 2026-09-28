@@ -18,7 +18,7 @@ const DIM_LABELS = {
 };
 const DIM_RAW_UNITS = {
   uspw:                    'units/store/wk',
-  loaded_margin_pct:       '% margin',
+  loaded_margin_pct:       'loaded margin',
   annual_shelf_space_cost: 'USD/yr',
   complexity_ratio:        'landed/MSRP',
   cannibalization_risk:    'velocity Δ',
@@ -586,7 +586,7 @@ function hideDetailCard() {
 function formatRaw(val, key) {
   if (val == null) return '—';
   if (key === 'annual_shelf_space_cost') return `$${val.toLocaleString('en-US', {maximumFractionDigits: 0})}`;
-  if (key === 'loaded_margin_pct') return `${val.toFixed(2)}%`;
+  if (key === 'loaded_margin_pct') return `${(val * 100).toFixed(0)}%`;
   if (key === 'uspw') return val.toFixed(2);
   return val.toFixed(4);
 }

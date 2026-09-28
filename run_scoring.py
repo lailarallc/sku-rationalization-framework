@@ -182,6 +182,13 @@ def main() -> None:
         quadrant_counts[q] = quadrant_counts.get(q, 0) + 1
     print("  Quadrant distribution:", quadrant_counts)
 
+    margins = [float(r["loaded_margin_pct"]) for r in rows if r["loaded_margin_pct"] is not None]
+    margin_note = (
+        f"Loaded margins range {min(margins):.0%} to {max(margins):.0%}; "
+        "scoring is portfolio-relative."
+        if margins else "Scoring is portfolio-relative."
+    )
+
     output = {
         "meta": {
             "source": "Cinderhaven Postgres (2023-2026 window)",
@@ -191,7 +198,7 @@ def main() -> None:
             "weights": custom_weights if custom_weights is not None else DEFAULT_WEIGHTS,
             "methodology_note": (
                 "Cannibalization scored via proxy (cross-sectional velocity comparison). "
-                "All margins negative after full cost loading — scoring is portfolio-relative."
+                + margin_note
             ),
         },
         "skus": scored,

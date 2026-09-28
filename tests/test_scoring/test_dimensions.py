@@ -69,10 +69,16 @@ class TestScoreContributionMargin:
     def test_below_p10_scores_1(self):
         assert score_contribution_margin(MARGIN_P10 - 0.1) == 1
 
-    def test_all_margins_negative(self):
-        # Whole portfolio has negative loaded margins — score 5 is "least negative"
-        assert score_contribution_margin(-4.0) == 5
-        assert score_contribution_margin(-8.0) == 1
+    # The thresholds are percentiles of real loaded margins, so they must sit in
+    # the platform's plausible band (-50% to +90%, assert_sku_loaded_margin_in_band).
+    # They were calibrated on case-pack-inflated COGS (platform 4e9f37a fixed it),
+    # so this fails until calibrate.py reruns. strict: once it passes, remove the
+    # xfail in the rescore commit (PLAN task 5).
+    @pytest.mark.xfail(strict=True, reason="thresholds predate platform fix 4e9f37a; PLAN task 5")
+    def test_margin_thresholds_in_plausible_band_when_calibrated(self):
+        thresholds = [MARGIN_P10, MARGIN_P25, MARGIN_P50, MARGIN_P75, MARGIN_P90]
+        outside = [t for t in thresholds if not -0.50 <= t <= 0.90]
+        assert not outside, f"margin thresholds outside -0.50..0.90: {outside}"
 
 
 # --- score_shelf_space_cost ---
