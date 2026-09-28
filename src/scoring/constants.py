@@ -16,11 +16,14 @@ VELOCITY_P75 = 13.5066
 VELOCITY_P90 = 18.2600
 
 # --- Contribution margin (loaded_margin_pct, 0.0–1.0) ---
-MARGIN_P10 = -7.7654
-MARGIN_P25 = -6.9733
-MARGIN_P50 = -4.7576
-MARGIN_P75 = -4.3700
-MARGIN_P90 = -3.9764
+# Set 2026-09-28 from production after the platform case-pack COGS fix
+# (4e9f37a); the other dimensions are still the 2026-06-28 calibration, so
+# the next calibrate.py run will also move them.
+MARGIN_P10 = 0.4352
+MARGIN_P25 = 0.4843
+MARGIN_P50 = 0.5199
+MARGIN_P75 = 0.5564
+MARGIN_P90 = 0.6066
 
 # --- Shelf-space cost (annual USD) — lower is better ---
 # Score 5: ≤ p25, Score 4: p25–p50, Score 3: p50–p75,

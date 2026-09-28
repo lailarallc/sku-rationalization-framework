@@ -80,15 +80,15 @@ class TestCinderhavenCanonicalRegression:
 
     def test_quadrant_count_fix_or_kill(self, scored):
         count = sum(1 for s in scored["skus"] if s["quadrant"] == "fix_or_kill")
-        assert count == 14, f"Expected 14 fix_or_kill, got {count}"
+        assert count == 13, f"Expected 13 fix_or_kill, got {count}"
 
     def test_quadrant_count_maintain(self, scored):
         count = sum(1 for s in scored["skus"] if s["quadrant"] == "maintain")
-        assert count == 16, f"Expected 16 maintain, got {count}"
+        assert count == 15, f"Expected 15 maintain, got {count}"
 
     def test_quadrant_count_double_down(self, scored):
         count = sum(1 for s in scored["skus"] if s["quadrant"] == "double_down")
-        assert count == 1, f"Expected 1 double_down, got {count}"
+        assert count == 3, f"Expected 3 double_down, got {count}"
 
     def test_quadrant_meta_matches_actual(self, scored):
         """meta.quadrant_counts should match actual data."""

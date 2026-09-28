@@ -17,7 +17,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 SCORED = ROOT / "data" / "cinderhaven_scored.json"
 
-GOLDEN_SHA256_PREFIX = "ec755c95a3f23e6d"
+GOLDEN_SHA256_PREFIX = "28647230ce946838"
 
 
 @pytest.fixture(scope="module")
@@ -40,7 +40,7 @@ def test_sku_count(scored):
 
 def test_quadrant_distribution(scored):
     counts = dict(collections.Counter(s["quadrant"] for s in scored["skus"]))
-    assert counts == {"fix_or_kill": 14, "kill": 19, "maintain": 16, "double_down": 1}
+    assert counts == {"fix_or_kill": 13, "kill": 19, "maintain": 15, "double_down": 3}
     assert scored["meta"]["quadrant_counts"] == counts
 
 

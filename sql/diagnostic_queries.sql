@@ -67,12 +67,12 @@ WITH dim_scores AS (
             WHEN v.uspw >= 2.0201 THEN 2
             ELSE 1
         END AS vel_score,
-        -- Margin score (higher = less negative = better)
+        -- Margin score (higher = better)
         CASE
-            WHEN m.loaded_margin_pct >= -4.3700 THEN 5
-            WHEN m.loaded_margin_pct >= -4.7576 THEN 4
-            WHEN m.loaded_margin_pct >= -6.9733 THEN 3
-            WHEN m.loaded_margin_pct >= -7.7654 THEN 2
+            WHEN m.loaded_margin_pct >= 0.5564 THEN 5
+            WHEN m.loaded_margin_pct >= 0.5199 THEN 4
+            WHEN m.loaded_margin_pct >= 0.4843 THEN 3
+            WHEN m.loaded_margin_pct >= 0.4352 THEN 2
             ELSE 1
         END AS margin_score,
         -- Shelf cost score (lower = better)
@@ -158,7 +158,7 @@ WITH kill_skus AS (
             -- Red flag = score <= 2. Threshold is score >= 3 boundary:
             -- velocity/margin: P25; shelf/complexity/cannibalization: P75.
             (CASE WHEN v.uspw >= 4.3606 THEN 0 ELSE 1 END +
-             CASE WHEN m.loaded_margin_pct >= -6.9733 THEN 0 ELSE 1 END +
+             CASE WHEN m.loaded_margin_pct >= 0.4843 THEN 0 ELSE 1 END +
              CASE WHEN s.annual_shelf_space_cost <= 119627.83 THEN 0 ELSE 1 END +
              CASE WHEN (sc.landed_cost_per_unit/NULLIF(pm.msrp,0)) <= 0.3012 THEN 0 ELSE 1 END +
              CASE WHEN COALESCE(GREATEST(0,-cp.velocity_delta_pct),0) <= 0.0745 THEN 0 ELSE 1 END

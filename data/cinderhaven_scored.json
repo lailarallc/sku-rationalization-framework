@@ -4,10 +4,10 @@
     "scoring_version": "v1",
     "sku_count": 50,
     "quadrant_counts": {
-      "fix_or_kill": 14,
+      "fix_or_kill": 13,
       "kill": 19,
-      "maintain": 16,
-      "double_down": 1
+      "double_down": 3,
+      "maintain": 15
     },
     "weights": {
       "velocity": 0.2,
@@ -16,7 +16,7 @@
       "production_complexity": 0.2,
       "cannibalization_risk": 0.2
     },
-    "methodology_note": "Cannibalization scored via proxy (cross-sectional velocity comparison). All margins negative after full cost loading \u2014 scoring is portfolio-relative."
+    "methodology_note": "Cannibalization scored via proxy (cross-sectional velocity comparison). Loaded margins range 31% to 62%; scoring is portfolio-relative."
   },
   "skus": [
     {
@@ -24,7 +24,7 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 16.567,
-        "loaded_margin_pct": -4.3735,
+        "loaded_margin_pct": 0.5262,
         "annual_shelf_space_cost": 157021.89,
         "complexity_ratio": 0.2914,
         "cannibalization_risk": 0.0
@@ -51,19 +51,19 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 18.6081,
-        "loaded_margin_pct": -4.6728,
+        "loaded_margin_pct": 0.496,
         "annual_shelf_space_cost": 161780.07,
         "complexity_ratio": 0.3057,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 1,
         "production_complexity": 2,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.4,
+      "weighted_score": 3.2,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -78,20 +78,20 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 9.1995,
-        "loaded_margin_pct": -8.5453,
+        "loaded_margin_pct": 0.5477,
         "annual_shelf_space_cost": 57382.78,
         "complexity_ratio": 0.2546,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 1,
+        "contribution_margin": 4,
         "shelf_space_cost": 4,
         "production_complexity": 4,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.6,
-      "quadrant": "fix_or_kill",
+      "weighted_score": 4.2,
+      "quadrant": "double_down",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -105,19 +105,19 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 5.5186,
-        "loaded_margin_pct": -4.4554,
+        "loaded_margin_pct": 0.5175,
         "annual_shelf_space_cost": 78370.79,
         "complexity_ratio": 0.2678,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 3,
         "production_complexity": 4,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.8,
+      "weighted_score": 3.6,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -132,19 +132,19 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 9.4495,
-        "loaded_margin_pct": -4.6854,
+        "loaded_margin_pct": 0.4845,
         "annual_shelf_space_cost": 84340.29,
         "complexity_ratio": 0.2897,
         "cannibalization_risk": 0.0038
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 3,
         "production_complexity": 3,
         "cannibalization_risk": 3
       },
-      "weighted_score": 3.4,
+      "weighted_score": 3.2,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -159,19 +159,19 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 20.9783,
-        "loaded_margin_pct": -4.5092,
+        "loaded_margin_pct": 0.5185,
         "annual_shelf_space_cost": 137893.32,
         "complexity_ratio": 0.2723,
         "cannibalization_risk": 0.2162
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 2,
         "production_complexity": 3,
         "cannibalization_risk": 1
       },
-      "weighted_score": 3.0,
+      "weighted_score": 2.8,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -186,7 +186,7 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 8.9914,
-        "loaded_margin_pct": -4.4136,
+        "loaded_margin_pct": 0.5213,
         "annual_shelf_space_cost": 57078.29,
         "complexity_ratio": 0.2733,
         "cannibalization_risk": 0.0
@@ -213,19 +213,19 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 4.3068,
-        "loaded_margin_pct": -4.1297,
+        "loaded_margin_pct": 0.5247,
         "annual_shelf_space_cost": 30068.97,
         "complexity_ratio": 0.2461,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 2,
-        "contribution_margin": 5,
+        "contribution_margin": 4,
         "shelf_space_cost": 5,
         "production_complexity": 5,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.4,
+      "weighted_score": 4.2,
       "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
@@ -240,20 +240,20 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 25.0855,
-        "loaded_margin_pct": -5.1403,
+        "loaded_margin_pct": 0.4631,
         "annual_shelf_space_cost": 22519.02,
         "complexity_ratio": 0.3086,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 3,
+        "contribution_margin": 2,
         "shelf_space_cost": 5,
         "production_complexity": 2,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.0,
-      "quadrant": "fix_or_kill",
+      "weighted_score": 3.8,
+      "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -267,19 +267,19 @@
       "product_line": "Artisan Sauces",
       "raw": {
         "uspw": 9.9323,
-        "loaded_margin_pct": -4.5509,
+        "loaded_margin_pct": 0.507,
         "annual_shelf_space_cost": 88574.47,
         "complexity_ratio": 0.3015,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 3,
         "production_complexity": 2,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.6,
+      "weighted_score": 3.4,
       "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
@@ -294,19 +294,19 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 8.4689,
-        "loaded_margin_pct": -4.3362,
+        "loaded_margin_pct": 0.5224,
         "annual_shelf_space_cost": 60606.53,
         "complexity_ratio": 0.2578,
         "cannibalization_risk": 0.1158
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 5,
+        "contribution_margin": 4,
         "shelf_space_cost": 4,
         "production_complexity": 4,
         "cannibalization_risk": 2
       },
-      "weighted_score": 3.8,
+      "weighted_score": 3.6,
       "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
@@ -321,19 +321,19 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 12.0499,
-        "loaded_margin_pct": -4.4235,
+        "loaded_margin_pct": 0.5158,
         "annual_shelf_space_cost": 100911.88,
         "complexity_ratio": 0.2662,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 3,
         "production_complexity": 4,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.0,
+      "weighted_score": 3.8,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -348,19 +348,19 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 2.4431,
-        "loaded_margin_pct": -8.2139,
+        "loaded_margin_pct": 0.5689,
         "annual_shelf_space_cost": 132738.86,
         "complexity_ratio": 0.2386,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 2,
-        "contribution_margin": 1,
+        "contribution_margin": 5,
         "shelf_space_cost": 2,
         "production_complexity": 5,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.0,
+      "weighted_score": 3.8,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -375,19 +375,19 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 2.0213,
-        "loaded_margin_pct": -7.7324,
+        "loaded_margin_pct": 0.6066,
         "annual_shelf_space_cost": 121388.03,
         "complexity_ratio": 0.2285,
         "cannibalization_risk": 0.0951
       },
       "scores": {
         "velocity": 2,
-        "contribution_margin": 2,
+        "contribution_margin": 5,
         "shelf_space_cost": 2,
         "production_complexity": 5,
         "cannibalization_risk": 2
       },
-      "weighted_score": 2.6,
+      "weighted_score": 3.2,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -402,20 +402,20 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 21.6801,
-        "loaded_margin_pct": -4.981,
+        "loaded_margin_pct": 0.4731,
         "annual_shelf_space_cost": 21454.89,
         "complexity_ratio": 0.2953,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 3,
+        "contribution_margin": 2,
         "shelf_space_cost": 5,
         "production_complexity": 3,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.2,
-      "quadrant": "maintain",
+      "weighted_score": 4.0,
+      "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -429,7 +429,7 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 2.0089,
-        "loaded_margin_pct": -3.9655,
+        "loaded_margin_pct": 0.5564,
         "annual_shelf_space_cost": 21927.97,
         "complexity_ratio": 0.2419,
         "cannibalization_risk": 0.0
@@ -456,19 +456,19 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 17.3336,
-        "loaded_margin_pct": -4.9051,
+        "loaded_margin_pct": 0.4583,
         "annual_shelf_space_cost": 127489.37,
         "complexity_ratio": 0.3159,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 3,
+        "contribution_margin": 2,
         "shelf_space_cost": 2,
         "production_complexity": 2,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.4,
+      "weighted_score": 3.2,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -483,19 +483,19 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 5.8169,
-        "loaded_margin_pct": -4.3688,
+        "loaded_margin_pct": 0.5299,
         "annual_shelf_space_cost": 51213.29,
         "complexity_ratio": 0.2657,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 5,
+        "contribution_margin": 4,
         "shelf_space_cost": 4,
         "production_complexity": 4,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.2,
+      "weighted_score": 4.0,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -510,7 +510,7 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 2.8428,
-        "loaded_margin_pct": -3.8169,
+        "loaded_margin_pct": 0.5681,
         "annual_shelf_space_cost": 36486.01,
         "complexity_ratio": 0.2487,
         "cannibalization_risk": 0.2832
@@ -537,20 +537,20 @@
       "product_line": "Dried Goods",
       "raw": {
         "uspw": 8.1988,
-        "loaded_margin_pct": -4.9417,
+        "loaded_margin_pct": 0.4769,
         "annual_shelf_space_cost": 74972.75,
         "complexity_ratio": 0.3077,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 3,
+        "contribution_margin": 2,
         "shelf_space_cost": 3,
         "production_complexity": 2,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.2,
-      "quadrant": "fix_or_kill",
+      "weighted_score": 3.0,
+      "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -564,19 +564,19 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 9.3996,
-        "loaded_margin_pct": -3.9993,
+        "loaded_margin_pct": 0.552,
         "annual_shelf_space_cost": 67087.76,
         "complexity_ratio": 0.2471,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 5,
+        "contribution_margin": 4,
         "shelf_space_cost": 4,
         "production_complexity": 5,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.6,
+      "weighted_score": 4.4,
       "quadrant": "double_down",
       "weights_used": {
         "velocity": 0.2,
@@ -591,19 +591,19 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 17.0099,
-        "loaded_margin_pct": -5.4506,
+        "loaded_margin_pct": 0.4317,
         "annual_shelf_space_cost": 172986.36,
         "complexity_ratio": 0.3413,
         "cannibalization_risk": 0.249
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 3,
+        "contribution_margin": 1,
         "shelf_space_cost": 1,
         "production_complexity": 1,
         "cannibalization_risk": 1
       },
-      "weighted_score": 2.2,
+      "weighted_score": 1.8,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -618,19 +618,19 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 4.5841,
-        "loaded_margin_pct": -3.9776,
+        "loaded_margin_pct": 0.5416,
         "annual_shelf_space_cost": 74557.64,
         "complexity_ratio": 0.2527,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 5,
+        "contribution_margin": 4,
         "shelf_space_cost": 4,
         "production_complexity": 4,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.2,
+      "weighted_score": 4.0,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -645,20 +645,20 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 17.5118,
-        "loaded_margin_pct": -2.9885,
+        "loaded_margin_pct": 0.3097,
         "annual_shelf_space_cost": 25440.01,
         "complexity_ratio": 0.4034,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 5,
+        "contribution_margin": 1,
         "shelf_space_cost": 5,
         "production_complexity": 1,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.2,
-      "quadrant": "fix_or_kill",
+      "weighted_score": 3.4,
+      "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -672,19 +672,19 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 2.2828,
-        "loaded_margin_pct": -7.3019,
+        "loaded_margin_pct": 0.6184,
         "annual_shelf_space_cost": 138213.04,
         "complexity_ratio": 0.2244,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 2,
-        "contribution_margin": 2,
+        "contribution_margin": 5,
         "shelf_space_cost": 1,
         "production_complexity": 5,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.0,
+      "weighted_score": 3.6,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -699,19 +699,19 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 1.8389,
-        "loaded_margin_pct": -7.3703,
+        "loaded_margin_pct": 0.6098,
         "annual_shelf_space_cost": 139543.36,
         "complexity_ratio": 0.2277,
         "cannibalization_risk": 0.0691
       },
       "scores": {
         "velocity": 1,
-        "contribution_margin": 2,
+        "contribution_margin": 5,
         "shelf_space_cost": 1,
         "production_complexity": 5,
         "cannibalization_risk": 3
       },
-      "weighted_score": 2.4,
+      "weighted_score": 3.0,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -726,20 +726,20 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 6.7299,
-        "loaded_margin_pct": -7.4274,
+        "loaded_margin_pct": 0.6241,
         "annual_shelf_space_cost": 72238.05,
         "complexity_ratio": 0.217,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 2,
+        "contribution_margin": 5,
         "shelf_space_cost": 4,
         "production_complexity": 5,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.8,
-      "quadrant": "fix_or_kill",
+      "weighted_score": 4.4,
+      "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -753,19 +753,19 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 1.6381,
-        "loaded_margin_pct": -7.7119,
+        "loaded_margin_pct": 0.5958,
         "annual_shelf_space_cost": 122654.0,
         "complexity_ratio": 0.2294,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 1,
-        "contribution_margin": 2,
+        "contribution_margin": 5,
         "shelf_space_cost": 2,
         "production_complexity": 5,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.0,
+      "weighted_score": 3.6,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -780,19 +780,19 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 13.8001,
-        "loaded_margin_pct": -5.9873,
+        "loaded_margin_pct": 0.394,
         "annual_shelf_space_cost": 133834.26,
         "complexity_ratio": 0.342,
         "cannibalization_risk": 0.2499
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 3,
+        "contribution_margin": 1,
         "shelf_space_cost": 2,
         "production_complexity": 1,
         "cannibalization_risk": 1
       },
-      "weighted_score": 2.4,
+      "weighted_score": 2.0,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -807,20 +807,20 @@
       "product_line": "Pantry Staples",
       "raw": {
         "uspw": 5.1704,
-        "loaded_margin_pct": -5.3208,
+        "loaded_margin_pct": 0.448,
         "annual_shelf_space_cost": 88165.97,
         "complexity_ratio": 0.3154,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 3,
+        "contribution_margin": 2,
         "shelf_space_cost": 3,
         "production_complexity": 2,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.2,
-      "quadrant": "fix_or_kill",
+      "weighted_score": 3.0,
+      "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -834,20 +834,20 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 16.0372,
-        "loaded_margin_pct": -8.8565,
+        "loaded_margin_pct": 0.5563,
         "annual_shelf_space_cost": 127271.04,
         "complexity_ratio": 0.2489,
         "cannibalization_risk": 0.0242
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 1,
+        "contribution_margin": 4,
         "shelf_space_cost": 2,
         "production_complexity": 4,
         "cannibalization_risk": 3
       },
-      "weighted_score": 3.0,
-      "quadrant": "kill",
+      "weighted_score": 3.6,
+      "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -861,20 +861,20 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 12.6262,
-        "loaded_margin_pct": -9.3438,
+        "loaded_margin_pct": 0.5405,
         "annual_shelf_space_cost": 66331.98,
         "complexity_ratio": 0.2678,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 1,
+        "contribution_margin": 4,
         "shelf_space_cost": 4,
         "production_complexity": 4,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.6,
-      "quadrant": "fix_or_kill",
+      "weighted_score": 4.2,
+      "quadrant": "double_down",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -888,19 +888,19 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 25.1397,
-        "loaded_margin_pct": -4.6935,
+        "loaded_margin_pct": 0.4955,
         "annual_shelf_space_cost": 30004.75,
         "complexity_ratio": 0.2909,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 5,
         "production_complexity": 3,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.4,
+      "weighted_score": 4.2,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -915,20 +915,20 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 1.6011,
-        "loaded_margin_pct": -7.7368,
+        "loaded_margin_pct": 0.6044,
         "annual_shelf_space_cost": 112686.11,
         "complexity_ratio": 0.2365,
         "cannibalization_risk": 0.0739
       },
       "scores": {
         "velocity": 1,
-        "contribution_margin": 2,
+        "contribution_margin": 5,
         "shelf_space_cost": 3,
         "production_complexity": 5,
         "cannibalization_risk": 3
       },
-      "weighted_score": 2.8,
-      "quadrant": "kill",
+      "weighted_score": 3.4,
+      "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -942,20 +942,20 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 6.2658,
-        "loaded_margin_pct": -7.7606,
+        "loaded_margin_pct": 0.608,
         "annual_shelf_space_cost": 62396.63,
         "complexity_ratio": 0.2168,
         "cannibalization_risk": 0.1946
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 2,
+        "contribution_margin": 5,
         "shelf_space_cost": 4,
         "production_complexity": 5,
         "cannibalization_risk": 2
       },
-      "weighted_score": 3.2,
-      "quadrant": "kill",
+      "weighted_score": 3.8,
+      "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -969,19 +969,19 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 9.9558,
-        "loaded_margin_pct": -4.2159,
+        "loaded_margin_pct": 0.5392,
         "annual_shelf_space_cost": 88188.63,
         "complexity_ratio": 0.2737,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 5,
+        "contribution_margin": 4,
         "shelf_space_cost": 3,
         "production_complexity": 3,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.0,
+      "weighted_score": 3.8,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -996,20 +996,20 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 2.2833,
-        "loaded_margin_pct": -7.6911,
+        "loaded_margin_pct": 0.6029,
         "annual_shelf_space_cost": 114347.24,
         "complexity_ratio": 0.216,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 2,
-        "contribution_margin": 2,
+        "contribution_margin": 5,
         "shelf_space_cost": 3,
         "production_complexity": 5,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.4,
-      "quadrant": "kill",
+      "weighted_score": 4.0,
+      "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -1023,7 +1023,7 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 18.2213,
-        "loaded_margin_pct": -4.7579,
+        "loaded_margin_pct": 0.4913,
         "annual_shelf_space_cost": 21771.33,
         "complexity_ratio": 0.2903,
         "cannibalization_risk": 0.0
@@ -1050,20 +1050,20 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 2.6046,
-        "loaded_margin_pct": -7.8086,
+        "loaded_margin_pct": 0.607,
         "annual_shelf_space_cost": 24208.43,
         "complexity_ratio": 0.2304,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 2,
-        "contribution_margin": 1,
+        "contribution_margin": 5,
         "shelf_space_cost": 5,
         "production_complexity": 5,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.6,
-      "quadrant": "kill",
+      "weighted_score": 4.4,
+      "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -1077,19 +1077,19 @@
       "product_line": "Snack Bites",
       "raw": {
         "uspw": 8.8463,
-        "loaded_margin_pct": -4.4626,
+        "loaded_margin_pct": 0.5154,
         "annual_shelf_space_cost": 64409.36,
         "complexity_ratio": 0.2728,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 4,
         "production_complexity": 3,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.0,
+      "weighted_score": 3.8,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -1104,19 +1104,19 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 10.696,
-        "loaded_margin_pct": -4.9886,
+        "loaded_margin_pct": 0.4695,
         "annual_shelf_space_cost": 124645.82,
         "complexity_ratio": 0.3243,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 3,
+        "contribution_margin": 2,
         "shelf_space_cost": 2,
         "production_complexity": 1,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.0,
+      "weighted_score": 2.8,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -1131,20 +1131,20 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 12.4778,
-        "loaded_margin_pct": -4.8212,
+        "loaded_margin_pct": 0.4842,
         "annual_shelf_space_cost": 23410.84,
         "complexity_ratio": 0.3004,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 4,
-        "contribution_margin": 3,
+        "contribution_margin": 2,
         "shelf_space_cost": 5,
         "production_complexity": 3,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.0,
-      "quadrant": "maintain",
+      "weighted_score": 3.8,
+      "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -1158,7 +1158,7 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 5.6525,
-        "loaded_margin_pct": -3.9384,
+        "loaded_margin_pct": 0.5577,
         "annual_shelf_space_cost": 51087.24,
         "complexity_ratio": 0.2532,
         "cannibalization_risk": 0.0
@@ -1185,20 +1185,20 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 6.4937,
-        "loaded_margin_pct": -4.9342,
+        "loaded_margin_pct": 0.4356,
         "annual_shelf_space_cost": 89953.35,
         "complexity_ratio": 0.3103,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 3,
+        "contribution_margin": 2,
         "shelf_space_cost": 3,
         "production_complexity": 2,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.2,
-      "quadrant": "fix_or_kill",
+      "weighted_score": 3.0,
+      "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
         "contribution_margin": 0.2,
@@ -1212,19 +1212,19 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 5.3931,
-        "loaded_margin_pct": -4.1756,
+        "loaded_margin_pct": 0.5368,
         "annual_shelf_space_cost": 55913.84,
         "complexity_ratio": 0.2504,
         "cannibalization_risk": 0.0512
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 5,
+        "contribution_margin": 4,
         "shelf_space_cost": 4,
         "production_complexity": 4,
         "cannibalization_risk": 3
       },
-      "weighted_score": 3.8,
+      "weighted_score": 3.6,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -1239,19 +1239,19 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 2.0086,
-        "loaded_margin_pct": -5.0234,
+        "loaded_margin_pct": 0.4315,
         "annual_shelf_space_cost": 32348.72,
         "complexity_ratio": 0.3097,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 1,
-        "contribution_margin": 3,
+        "contribution_margin": 1,
         "shelf_space_cost": 5,
         "production_complexity": 2,
         "cannibalization_risk": 5
       },
-      "weighted_score": 3.2,
+      "weighted_score": 2.8,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -1266,19 +1266,19 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 4.5217,
-        "loaded_margin_pct": -4.1223,
+        "loaded_margin_pct": 0.5136,
         "annual_shelf_space_cost": 33594.67,
         "complexity_ratio": 0.2604,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 5,
+        "contribution_margin": 3,
         "shelf_space_cost": 5,
         "production_complexity": 4,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.4,
+      "weighted_score": 4.0,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -1293,19 +1293,19 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 3.8952,
-        "loaded_margin_pct": -2.4647,
+        "loaded_margin_pct": 0.3917,
         "annual_shelf_space_cost": 87571.99,
         "complexity_ratio": 0.3692,
         "cannibalization_risk": 0.0765
       },
       "scores": {
         "velocity": 2,
-        "contribution_margin": 5,
+        "contribution_margin": 1,
         "shelf_space_cost": 3,
         "production_complexity": 1,
         "cannibalization_risk": 2
       },
-      "weighted_score": 2.6,
+      "weighted_score": 1.8,
       "quadrant": "kill",
       "weights_used": {
         "velocity": 0.2,
@@ -1320,19 +1320,19 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 14.4259,
-        "loaded_margin_pct": -4.7572,
+        "loaded_margin_pct": 0.4903,
         "annual_shelf_space_cost": 31605.37,
         "complexity_ratio": 0.2814,
         "cannibalization_risk": 0.0
       },
       "scores": {
         "velocity": 5,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 5,
         "production_complexity": 3,
         "cannibalization_risk": 5
       },
-      "weighted_score": 4.4,
+      "weighted_score": 4.2,
       "quadrant": "maintain",
       "weights_used": {
         "velocity": 0.2,
@@ -1347,19 +1347,19 @@
       "product_line": "Specialty Condiments",
       "raw": {
         "uspw": 7.3824,
-        "loaded_margin_pct": -4.5398,
+        "loaded_margin_pct": 0.5004,
         "annual_shelf_space_cost": 79003.62,
         "complexity_ratio": 0.2991,
         "cannibalization_risk": 0.1416
       },
       "scores": {
         "velocity": 3,
-        "contribution_margin": 4,
+        "contribution_margin": 3,
         "shelf_space_cost": 3,
         "production_complexity": 3,
         "cannibalization_risk": 2
       },
-      "weighted_score": 3.0,
+      "weighted_score": 2.8,
       "quadrant": "fix_or_kill",
       "weights_used": {
         "velocity": 0.2,
