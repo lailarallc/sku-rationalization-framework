@@ -13,18 +13,18 @@ Given a brand's Postgres data, the framework:
 3. Assigns each SKU to one of four action buckets — double down, maintain, fix or kill, or kill — based on red-flag counts, not a weighted average that can hide a fatal flaw
 4. Exports a static JSON snapshot and serves an interactive demo with adjustable dimension weights, ranked charts, and click-through SKU detail
 
-The included Cinderhaven case study applies the framework to a 50-SKU portfolio across 6 retailers over a 3-year window. Result: 19 kill, 14 fix-or-kill, 16 maintain, 1 double down.
+The included Cinderhaven case study applies the framework to a 50-SKU portfolio across 6 retailers over a 3-year window. Result: 19 kill, 13 fix-or-kill, 15 maintain, 3 double down.
 
 ## Why it matters
 
-Mid-size food brands routinely carry SKUs that lose money on every unit once trade spend, slotting, and shelf costs are fully loaded — but gut-feel portfolio reviews protect them. This framework replaces that debate with evidence:
+Mid-size food brands routinely carry SKUs that earn less for their shelf space and production time than the rest of the line — but gut-feel portfolio reviews protect them. This framework replaces that debate with evidence:
 
 - A defensible, data-calibrated kill list instead of opinions about "brand-building" SKUs
 - Shelf-space cost made explicit, so slow movers can't hide behind gross margin
 - Cannibalization measured (via a cross-sectional velocity proxy), so cutting a SKU doesn't silently transfer its problem to a sibling product
 - Adjustable weights in the demo let stakeholders stress-test the ranking live — bucket assignment stays fixed, so the conversation can't be gamed
 
-In the case study, 33 of 50 SKUs (66%) landed in kill or fix-or-kill — a typical outcome for portfolios that have grown by line extension.
+In the case study, 32 of 50 SKUs (64%) landed in kill or fix-or-kill — a typical outcome for portfolios that have grown by line extension.
 
 ## Quick start
 
@@ -95,7 +95,7 @@ The case study consumes the full Cinderhaven canonical dataset:
 This framework is the basis of Lailara LLC's SKU Portfolio Audit engagement, which delivers:
 
 - Full scored output for your portfolio
-- Kill list with quantified annual savings (shelf cost + loaded contribution impact)
+- Kill list with quantified annual impact (shelf cost freed, minus the loaded contribution given up)
 - Fix-or-kill action plan with one specific lever per SKU
 - Methodology doc and SQL queries for your internal team
 

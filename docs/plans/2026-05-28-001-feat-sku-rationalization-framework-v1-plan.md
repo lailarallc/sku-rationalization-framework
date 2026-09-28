@@ -60,7 +60,7 @@ This framework makes that number visible across five dimensions, classifies ever
 | dbt model location | Cinderhaven platform repo (`models/intermediate/`) | Models serve multiple downstream consumers; SSOT is the platform |
 | Cannibalization method | Determined by spike (U1) — prefer rigorous DiD if data supports | `stg_scan_data` has store/week/SKU grain; `fct_distribution.authorized_date` may have launch dates |
 | Threshold calibration | Calibration script queries Cinderhaven p10/p25/p50/p75/p90 per dimension | Velocity tool failure mode: intuition-set thresholds were wrong by 5x when dataset changed |
-| COGS formula | `units_ordered × case_pack_qty × cogs_per_unit` for B2B; DTC uses `units_ordered` directly | Documented failure in both where-the-money-comes-from and cinderhaven-data-platform: units_ordered is in cases for B2B |
+| COGS formula | `units_ordered × cogs_per_unit` for B2B and DTC | units_ordered is already in single units; multiplying by case_pack_qty overstated COGS 6–24× (fixed 2026-09-28, platform 4e9f37a) |
 | SKU count | 50 (actual platform state) | Brief says 90, but platform was rebuilt to 50 in May 2026; headline finding recalibrated accordingly |
 | Quadrant colors | Double down: Chicago-20 (`#1f2e7a`); Maintain: HK-35 (`#158f75`); Fix or kill: Singapore-55 (`#ee8a2a`); Kill: Tokyo-40 (`#b82d4a`) | Matches Lailara divergent palette logic; positive=HK/Chicago, warning=Singapore, negative=Tokyo |
 
@@ -210,7 +210,7 @@ sku-rationalization-framework/
 
 `int_loaded_contribution_by_sku`:
 - Start from `mart_channel_contribution.sql` as the reference — deductions, chargebacks, and trade spend assembly pattern is already proven there.
-- COGS formula: `SUM(ol.units_ordered × pm.case_pack_qty × sc.cogs_per_unit)` for B2B rows (`ol.channel = 'B2B'`). DTC uses `ol.units_ordered` directly (already in individual units). **This exact formula error has caused a factor-of-15 undercount twice on this codebase.**
+- COGS formula: `SUM(ol.units_ordered × sc.cogs_per_unit)` for B2B rows (`ol.channel = 'B2B'`). DTC uses `ol.units_ordered` directly (already in individual units). **Multiplying by case_pack_qty was the error: it overstated COGS 6–24× until it was fixed on 2026-09-28.**
 - Include: slotting amortized over 24 months (2-year SKU life at mass retail), trade spend from `stg_promotions.promo_cost` per SKU, chargeback rates from `stg_retailer_chargebacks` + `stg_distributor_chargebacks`.
 - Output grain: one row per SKU with `loaded_contribution_annual` and `loaded_cost_annual`.
 
@@ -224,7 +224,7 @@ Before writing: query `information_schema.tables` in the live DB to confirm ever
 
 **Test scenarios:**
 - `int_loaded_contribution_by_sku`: no NULLs on `loaded_contribution_annual` or `loaded_cost_annual` for any of the 50 SKUs
-- `int_loaded_contribution_by_sku`: a B2B order with `units_ordered=10` and `case_pack_qty=12` and `cogs_per_unit=2.50` produces COGS contribution of `10 × 12 × 2.50 = $300`, not `10 × 2.50 = $25` — verify with a known order row
+- `int_loaded_contribution_by_sku`: a B2B order with `units_ordered=10`, `case_pack_qty=12` and `cogs_per_unit=2.50` produces COGS of `10 × 2.50 = $25`, not `10 × 12 × 2.50 = $300` — verify with a known order row
 - `int_shelf_space_cost_by_sku`: every SKU has at least one retailer row; no negative costs
 - `dbt parse` validates both models without a live DB connection
 

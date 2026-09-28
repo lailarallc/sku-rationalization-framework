@@ -51,10 +51,10 @@ def score_velocity(uspw: float | None) -> int | None:
 
 
 def score_contribution_margin(loaded_margin_pct: float | None) -> int | None:
-    """Score loaded contribution margin rate. Higher (less negative) is better.
+    """Score loaded contribution margin rate. Higher is better.
 
-    All Cinderhaven SKUs have negative loaded margins after full cost loading;
-    scoring is portfolio-relative — score 5 = least negative in the portfolio.
+    All Cinderhaven SKUs have positive loaded margins (31% to 62%); scoring is
+    portfolio-relative — score 5 = top quartile in the portfolio.
     """
     if loaded_margin_pct is None:
         return None

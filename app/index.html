@@ -9,9 +9,9 @@
           integrity="sha384-Hl48Kq2HifOWdXEjMsKo6qxqvRLTYqIGbvlENBmkHAxZKIGCXv43H6W1jA671RzC"
           crossorigin="anonymous"
           charset="utf-8"></script>
-  <meta name="description" content="A scored kill list with quantified savings and a fix-or-kill action plan, one lever per SKU, re-runnable each quarter.">
+  <meta name="description" content="A scored kill list with quantified shelf-cost impact and a fix-or-kill action plan, one lever per SKU, re-runnable each quarter.">
   <meta property="og:title" content="SKU Portfolio Audit">
-  <meta property="og:description" content="A scored kill list with quantified savings and a fix-or-kill action plan, one lever per SKU, re-runnable each quarter.">
+  <meta property="og:description" content="A scored kill list with quantified shelf-cost impact and a fix-or-kill action plan, one lever per SKU, re-runnable each quarter.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sku.lailarallc.com/">
   <meta property="og:image" content="https://lailarallc.com/og/s/sku.png">
@@ -40,7 +40,7 @@
     <div class="detail-card__dims" id="dc-dims"></div>
     <p class="detail-card__note">
       Scores 1–5, portfolio-relative. Cannibalization via proxy (cross-sectional).
-      All margins negative after full cost loading.
+      Loaded margins run 31% to 62% after full cost loading.
     </p>
   </aside>
 
@@ -132,7 +132,7 @@
         </div>
         <div class="chart-panel">
           <h2 class="chart-title">Contribution Margin</h2>
-          <p class="chart-subtitle">Loaded margin after all costs. Higher score = least negative margin. Dashed line = score of 3.</p>
+          <p class="chart-subtitle">Loaded margin after COGS, trade spend, chargebacks, and deductions. Higher score = higher loaded margin. Dashed line = score of 3.</p>
           <div id="chart-dim-contribution_margin" class="chart-container"></div>
         </div>
         <div class="chart-panel">
@@ -196,7 +196,7 @@
       <span class="site-footer__source">
         Source: Cinderhaven Postgres, 2023&ndash;2026 window &middot;
         Cannibalization via proxy (cross-sectional velocity comparison) &middot;
-        All margins portfolio-relative (fully loaded, all negative)
+        All margins portfolio-relative (loaded, 31% to 62%)
       </span>
       <a class="site-footer__methodology" href="docs/scoring_methodology.md">Scoring methodology</a>
       <span class="site-footer__branding">Lailara LLC &mdash; SKU Rationalization Framework v1</span>

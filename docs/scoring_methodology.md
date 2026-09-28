@@ -31,19 +31,19 @@ The framework answers: *which SKUs should be killed, fixed, maintained, or doubl
 
 ### 2. Contribution Margin
 **What it measures:** Loaded contribution margin as a percentage of gross revenue, after deducting COGS, trade spend, chargebacks, and allocated retailer deductions.  
-**Direction:** Higher (less negative) is better. All Cinderhaven SKUs carry negative loaded margins after full cost loading; scoring is portfolio-relative.  
+**Direction:** Higher is better. All Cinderhaven SKUs carry positive loaded margins (31% to 62%); scoring is portfolio-relative, so a low score means thin next to the rest of the portfolio, not unprofitable.  
 **Data source:** `public_intermediate.int_loaded_contribution_by_sku`
 
 | Score | Threshold |
 |-------|-----------|
-| 5 | ≥ −4.37% (p75 — least negative) |
-| 4 | ≥ −4.76% (p50) |
-| 3 | ≥ −6.97% (p25) |
-| 2 | ≥ −7.77% (p10) |
-| 1 | < −7.77% |
+| 5 | ≥ 55.64% (p75) |
+| 4 | ≥ 51.99% (p50) |
+| 3 | ≥ 48.43% (p25) |
+| 2 | ≥ 43.52% (p10) |
+| 1 | < 43.52% |
 
-**COGS formula (B2B):** `units_ordered × case_pack_qty × cogs_per_unit`  
-(cases shipped × units per case × cost per unit)
+**COGS formula (B2B):** `units_ordered × cogs_per_unit`  
+(units ordered × cost per unit; units_ordered is already in single units)
 
 ### 3. Shelf Space Cost
 **What it measures:** Annual cost of maintaining shelf presence, combining actual promotional spend with a $400/store/year overhead proxy for compliance, data, and resets.  
@@ -149,7 +149,7 @@ Default weights are equal (20% per dimension). The interactive demo tool at `app
 
 1. **Cannibalization is a proxy.** Cross-sectional comparison is directional, not causal. A positive cannibalization signal may reflect store-mix differences rather than true demand transfer. Rigorous DiD would require a longer pre-authorization window.
 
-2. **All margins are negative.** Cinderhaven's fully loaded margins are negative across the portfolio after accounting for COGS, trade spend, chargebacks, and deductions. The scoring is portfolio-relative: score 5 means "least negative," not profitable.
+2. **Loaded margin excludes shelf cost.** Loaded margin deducts COGS, trade spend, chargebacks, and deductions, but not shelf or slotting cost, which is scored as its own dimension. All 50 SKUs are positive, at 31% to 62%. The scoring is portfolio-relative: a score of 1 means a thin margin next to the rest of the portfolio, not a loss.
 
 3. **Thresholds are portfolio-relative.** A SKU that scores 5 on velocity in this portfolio might score 3 in a different brand's portfolio. Thresholds should be recalibrated for each new client engagement.
 

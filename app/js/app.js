@@ -105,8 +105,7 @@ function renderHeroFinding() {
   if (!flagged.length || !shelfCost) return;
   el.textContent =
     `${flagged.length} of ${allSkus.length} SKUs score kill or fix-or-kill — together ` +
-    `carrying $${(shelfCost / 1e6).toFixed(1)}M a year in shelf-space cost the portfolio ` +
-    `doesn't earn back.`;
+    `carrying $${(shelfCost / 1e6).toFixed(1)}M a year in shelf-space cost.`;
 }
 
 async function init() {

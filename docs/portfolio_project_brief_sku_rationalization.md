@@ -97,20 +97,20 @@ Cinderhaven has 50 SKUs across five product lines (Artisan Sauces, Pantry Staple
 
 | Recommendation | SKU Count | % of Portfolio |
 |---------------|:---------:|:--------------:|
-| Double down | 1 | 2% |
-| Maintain | 16 | 32% |
-| Fix or kill | 14 | 28% |
+| Double down | 3 | 6% |
+| Maintain | 15 | 30% |
+| Fix or kill | 13 | 26% |
 | Kill | 19 | 38% |
 
 (Counts from the shipped scoring run, `data/cinderhaven_scored.json`.)
 
-19 of 50 SKUs scored as Kill — a 38% rate that reflects how far the assortment outran the infrastructure. Together the 33 flagged SKUs (kill + fix-or-kill) carry ~$3.0M a year in shelf-space cost the portfolio doesn't earn back.
+19 of 50 SKUs scored as Kill — a 38% rate that reflects how far the assortment outran the infrastructure. Together the 32 flagged SKUs (kill + fix-or-kill) carry ~$2.9M a year in shelf-space cost.
 
-The "fix or kill" 14 are even more interesting. Each one has a specific issue:
-- 4 SKUs with velocity below retailer threshold at one retailer but above at another (fix: delist at the underperforming retailer, maintain at the strong one)
-- 3 SKUs with negative contribution margin driven entirely by chargeback rates (fix: resolve the product data error causing the chargebacks)
-- 4 SKUs cannibalizing higher-margin siblings (fix: differentiate positioning or consolidate into the stronger SKU)
-- 3 SKUs with production complexity disproportionate to their contribution (fix: consolidate production runs or reformulate)
+The "fix or kill" 13 are even more interesting. Each one has a specific issue:
+- 5 SKUs held back by slow sales (fix: widen distribution, or delist at the weakest retailer)
+- 3 SKUs cannibalizing a sibling (fix: differentiate positioning or consolidate into the stronger SKU)
+- 2 SKUs carrying heavy shelf-space cost (fix: renegotiate placement or cut facings)
+- 2 SKUs with thin margins next to the portfolio, and 1 with outsized production complexity (fix: reprice or reformulate; consolidate production runs)
 
 **Part 3 — The evidence: the technical artifacts**
 
@@ -170,7 +170,7 @@ For a $25M brand with 60–90 SKUs:
 |------------|--------|---------|
 | Interactive rationalization tool | Streamlit, hosted | Prospect plays with it, sees their own portfolio scored |
 | Excel financial model | .xlsx download | CFO scenarios — "what if we kill these 15?" |
-| Cinderhaven case study | HTML + PDF | Proof — 50-SKU portfolio analyzed, 33 flagged, ~$3.0M/yr shelf-space cost surfaced |
+| Cinderhaven case study | HTML + PDF | Proof — 50-SKU portfolio analyzed, 32 flagged, ~$2.9M/yr shelf-space cost surfaced |
 | SQL diagnostic queries | .sql files in repo | Platform query examples for each scoring dimension |
 | Scoring methodology doc | Markdown in repo | Transparency on how each dimension is scored and weighted |
 
@@ -240,7 +240,7 @@ New dbt models specific to this piece:
 
 ### 7. Marketing / Distribution
 
-- **Portfolio integration:** Cross-linked from the Velocity Decision Tool ("Want to go deeper on SKU rationalization? Here's the full framework."). Referenced in Where the Money's channel analysis ("Your Walmart contribution includes 15 SKUs that are individually net-negative").
+- **Portfolio integration:** Cross-linked from the Velocity Decision Tool ("Want to go deeper on SKU rationalization? Here's the full framework."). Referenced in Where the Money's channel analysis.
 - **LinkedIn:**
   - Launch post: "A $25M food brand's bottom 15 SKUs generate $180K in revenue and cost $290K to maintain. Here's the framework that finds them." Pair with the four-quadrant scatter plot.
   - Follow-up: "The hardest conversation in specialty food isn't 'which retailer should we pursue?' It's 'which SKUs should we kill?'" The emotional angle.
