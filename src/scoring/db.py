@@ -14,6 +14,8 @@ from pathlib import Path
 
 import psycopg2
 
+from src.scoring import prod_guard
+
 
 def load_env(path: Path) -> None:
     """Load KEY=VALUE pairs from a .env file into os.environ (no-op if missing)."""
@@ -42,6 +44,7 @@ def connect(env_path: Path) -> psycopg2.extensions.connection:
             "Set it in your environment or place it in the .env file at:\n"
             f"  {env_path}"
         )
+    prod_guard.check(host="localhost", port=5432)
     return psycopg2.connect(
         host="localhost",
         port=5432,
