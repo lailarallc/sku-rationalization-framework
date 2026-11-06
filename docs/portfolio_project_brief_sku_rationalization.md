@@ -49,7 +49,7 @@ So nothing gets killed. The portfolio grows. Margin erodes. Production gets more
 
 **Expands the most-asked-about module in the Velocity Decision Tool.** The Velocity Tool has 8 modules; SKU Rationalization is Module 6. It ranks SKUs by velocity and flags underperformers. Prospects who use the Velocity Tool consistently ask: "Can you go deeper on the SKU analysis?" This piece is the deeper version.
 
-**Multi-dimensional vs. single-dimensional.** The Velocity Tool module uses velocity as the sole lens. The standalone Framework uses five dimensions: velocity × contribution margin × shelf-space cost × production complexity × cannibalization risk. That's the difference between "this SKU is slow" and "this SKU is slow, margin-negative, costs $8K/year to maintain at Walmart, adds 2 hours of changeover per production run, and cannibalizes your best seller."
+**Multi-dimensional vs. single-dimensional.** The Velocity Tool module uses velocity as the sole lens. The standalone Framework uses five dimensions: velocity × contribution margin × shelf-space cost × production complexity × cannibalization risk. That's the difference between "this SKU is slow" and "this SKU is slow, margin-negative, costs $8K/year to maintain at the national mass retailer, adds 2 hours of changeover per production run, and cannibalizes your best seller."
 
 **The highest-leverage margin play at $10M–$30M.** Killing 10–15 SKUs from a 60-SKU portfolio can save $100K–$300K/year in loaded costs and free shelf space, production capacity, and management attention for higher-performing items or new launches. No other single action at this stage delivers comparable margin improvement with this little risk.
 
